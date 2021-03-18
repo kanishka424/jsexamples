@@ -4,37 +4,37 @@
 
 //=========================NOTE================================================
 //this video should be watched to understand the complete theory
-var john={
-    firstName:'John',
-    lastName:'Williams',
-    age:27,
-    presentation:function (manner,timeOfDay){
-        if(manner==='professional'){
-            console.log(
-                'Hi everyone, good'+timeOfDay+'I\'m'+this.firstName+" "+this.lastName
-            )
+// var john={
+//     firstName:'John',
+//     lastName:'Williams',
+//     age:27,
+//     presentation:function (manner,timeOfDay){
+//         if(manner==='professional'){
+//             console.log(
+//                 'Hi everyone, good'+timeOfDay+'I\'m'+this.firstName+" "+this.lastName
+//             )
 
-        }else if(manner==='friendly'){
-            console.log(
-                'Whatsup?, good'+timeOfDay+'I\'m'+this.firstName+" "+this.lastName
-            )
+//         }else if(manner==='friendly'){
+//             console.log(
+//                 'Whatsup?, good'+timeOfDay+'I\'m'+this.firstName+" "+this.lastName
+//             )
 
-        }
+//         }
 
-    }
-}
-
-
-john.presentation('friendly','morning');
-
-var Anna={
-    firstName:'Anna',
-    lastName:'Hendricks',
-    age:27
-}
+//     }
+// }
 
 
-john.presentation.call(Anna,'friendly','morning')//how call works ,Anna doesn't even have presentation() method
+// john.presentation('friendly','morning');
+
+// var Anna={
+//     firstName:'Anna',
+//     lastName:'Hendricks',
+//     age:27
+// }
+
+
+// john.presentation.call(Anna,'friendly','morning')//how call works ,Anna doesn't even have presentation() method
 
 //john.presentation.apply(Anna,'friendly','morning')//this works same as call() but only two arguments 
 //1.this or the object
