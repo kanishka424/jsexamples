@@ -9,22 +9,187 @@
 <body>
     <h1>Asynchronous JavaScript</h1>
     <script>
-        const second= ()=> {
-            setTimeout(//first argument for setTimeout() is an arrow function
-                ()=>{
-                    console.log("I'm second")
-                }
-            ,2000)
+        // const second= ()=> {//4.a simple asynchronus example
+        //     setTimeout(//first argument for setTimeout() is an arrow function
+        //         ()=>{
+        //             console.log("I'm second")
+        //         }
+        //     ,2000)
             
-        }
+        // }
 
-        const first=()=>{
-            console.log("I'm first");
-            second()
-            console.log("The End")
-        }
+        // const first=()=>{
+        //     console.log("I'm first");
+        //     second()
+        //     console.log("The End")
+        // }
         
-        first();
+            // first();
+
+
+            // function getRecipe() {//old way of asynchronus js but going towards callback hell
+            //     setTimeout(() => {
+            //         let idArray = [12, 14, 1, 5, 6]
+            //         console.log(idArray);
+
+            //         setTimeout(id => {
+            //             const recipe = {
+            //                 title: 'Fresh tomato paste',
+            //                 publisher: 'Jonas'
+            //             }
+            //             console.log(`${id}:${recipe.title}`);
+            //             setTimeout(id => {
+            //                 const recipe2 = {
+            //                     title: 'Italian Pizza',
+            //                     publisher: 'Jonas'
+            //                 }
+            //                 console.log(`${id}:${recipe2.title} `);
+            //             }, 1000, recipe.publisher)
+
+            //         }, 1000, idArray[2])
+
+            //     }, 2000)
+
+
+            // }
+
+            // getRecipe();
+
+
+            // const getIDs = new Promise((resolve, reject) => {//THe simple promise ,Promise takes the argument executor function and executor function takes two arguments "resolve" and "reject"
+            //         setTimeout(() => {
+            //             reject([123, 789.234, 634, 954]);
+            //         }, 1500);
+            //     }
+            //     )
+
+            //     getIDs
+            //     .then(
+            //         IDs => console.log(IDs)//calling the simple promise with then() and catch()
+            //     ).catch(error=>
+            //         console.log("ERROR!!")
+            //     )
+
+
+///////////////////////////////////////THe EXAMPLE TUTOR////////////////////////////////////////////////////////////////
+            // const getIDs= new Promise((resolve,reject)=>{
+            //     setTimeout(()=>{
+            //         resolve([523,373,837,353])
+            //     }),1500
+            // });
+
+
+            // const getRecipe = recID =>{
+            //     return new Promies((resolve,reject)=>
+            //     {
+            //         setTimeout(ID=>{
+            //             const recipe={title:'Fresh tomato pasta',
+            //         publisher:'Jonas'
+            //     }
+            //     resolve(`${ID}:${recipe.title}`);
+            //         },1500,recID)
+            //     })
+            // };
+
+
+            // const getRelated=publisher=>{
+            //     return new Promise((resolve,reject)=>{
+            //         setTimeout(pub=>{
+            //             const recipe={title:"Italian Pizza",
+            //         publisher:'Jonas'};
+            //         resolve(`${pub}:${recipe.title}`);
+
+            //         },1500,publiher)
+            //     })
+            // }
+
+
+            // getIDs
+            // .then(IDs=>{
+            //     console.log(IDs[2]);
+            //     return getRecipe(IDs[2])
+            // })
+            // .then(recipe=>{
+            //     console.log(recipe);
+            //     return getRelated('Jonas schem')
+
+            // }
+            // )
+
+            // .then(
+            //     recipe=>{
+            //             conole.log(recipe)
+            //     }
+            // )
+            // .catch(error=>{
+            // console.log("Error!!")
+
+            // });
+
+
+
+    ////////////////////////////////////////////MY EXample for promises it works well//////////////////////////////////////////////////////////////////////////////   
+
+//        const getIDs=new Promise((resolve,reject)=>{setTimeout(
+//            ()=>{
+//        resolve([1334,284,493,583,349]);
+       
+//            },1500);
+//         }
+//        );
+
+
+//        const getRecipe=recID=>{
+//             return new Promise((resolve,reject)=>{
+//              setTimeout(ID=>{
+                  
+//             const recipe={
+//                 author:'Kanishka',
+//                 name:'Tom yun soup'
+
+            
+//             }
+//             resolve(`Author is ${recipe.author} and recipe is ${recipe.name}`)
+             
+//        },1500,recID);
+//     });        
+// }
+           
+
+//        const getRelated=author=> {
+//             return new Promise((resolve,reject)=>{
+//            setTimeout(author=>{
+            
+//             const recipe={
+//                     author:'Kanishka',
+//                     name:'Kebab'
+//                    }
+//                     resolve(`Author is ${recipe.author} and recipe is ${recipe.name}`)
+//                },1500,author)
+           
+//        }
+//            )
+//     }
+
+
+//        getIDs.
+//        then(IDs=>{
+//        console.log(IDs);
+//        return getRecipe(IDs[2])
+//        }
+//        ).then(
+//            recipe=>{
+//                console.log(recipe)
+//                return getRelated("Kanishka")
+//            }
+
+//        ).
+//        then(
+//            recipe=>console.log(recipe)
+//        ).
+//        catch(error=>console.log(error))
+
+//        console.log("hi end")
     </script>
 </body>
 </html>
